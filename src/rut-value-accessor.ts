@@ -29,7 +29,7 @@ export class RutValueAccessor implements ControlValueAccessor {
 
   public writeValue(value: any): void {
     let normalizedValue: string = rutFormat(value) || '';
-    this.renderer.setElementProperty(this.elementRef.nativeElement, 'value', normalizedValue);
+    this.renderer.setProperty(this.elementRef.nativeElement, 'value', normalizedValue);
   }
 
   public registerOnChange(fn: (_: any) => void): void { this.onChange = fn; }
